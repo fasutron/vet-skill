@@ -10,7 +10,7 @@ No dependencies. No installation. Works in any LLM-powered coding agent that can
 
 When you install a skill, rule file, or agent configuration into a tool like Claude Code, Cursor, or Windsurf, that file becomes part of the LLM's system-level instruction context. It runs with full tool privileges: file writes, shell commands, git operations, network requests. A compromised file can silently modify agent behavior, exfiltrate data, or override safety rules.
 
-The [Rules File Backdoor attack](https://www.pillar.security/blog/new-vulnerability-in-github-copilot-and-cursor-how-hackers-can-weaponize-ai-code-editors) (Pillar Security, March 2025) demonstrated this by embedding invisible Unicode characters in agent config files, characters that traditional scanners and code review can't see. The attack surface has only grown since then. Agent skills now include markdown instructions, Python scripts, shell commands, referenced data files, and YAML manifests.
+The [Rules File Backdoor attack]([[https://www.pillar.security/blog/new-vulnerability-in-github-copilot-and-cursor-how-hackers-can-weaponize-ai-code-editors]) (Pillar Security, March 2025) demonstrated this by embedding invisible Unicode characters in agent config files, characters that traditional scanners and code review can't see. The attack surface has only grown since then. Agent skills now include markdown instructions, Python scripts, shell commands, referenced data files, and YAML manifests.
 
 `vet-skill` scans all of it.
 
